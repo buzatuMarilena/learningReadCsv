@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -76,6 +78,18 @@ public class ReadCsvFile {
                 athletsList.get(1).getFinalResult() + " ("+athletsList.get(1).getSkiTimeResult() +" + " + athletsList.get(1).getPenalities() + ")");
         System.out.println("Third Place - " + athletsList.get(2).getAthleteName() + "  " +
                 athletsList.get(2).getFinalResult() + " ("+athletsList.get(2).getSkiTimeResult() +" + " + athletsList.get(2).getPenalities() + ")");
+
+        JFrame frame = new JFrame();
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel("Winner - " + athletsList.get(0).getAthleteName() + "  " +
+                athletsList.get(0).getFinalResult() + " ("+athletsList.get(0).getSkiTimeResult() +" + " + athletsList.get(0).getPenalities() + ")" );
+
+        panel.add(label);
+        frame.add(panel);
+        frame.setLocationRelativeTo(null);
+
+        frame.setSize(300, 200);
+        frame.setVisible(true);
 
 
     }
