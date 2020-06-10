@@ -119,12 +119,8 @@ public class ConcurrencyHomeworkFestival {
 
                try {
                    while (!clintiQueue.isEmpty()) {
-
-                       try {
-                           Thread.sleep(5000);
-                       } catch (InterruptedException e) {
-                           e.printStackTrace();
-                       }
+                       
+                       Thread.sleep(5000);
 
                        if (clintiQueue.getFirst().equals("full")) {
                            full++;
@@ -147,7 +143,7 @@ public class ConcurrencyHomeworkFestival {
                            clintiQueue.removeFirst();
                        }
                    }
-               }catch (NoSuchElementException e){
+               }catch (Exception e){
                    e.printStackTrace();
                }
             System.out.println(full + "people have full tickets");
