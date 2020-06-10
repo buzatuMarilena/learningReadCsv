@@ -1,7 +1,6 @@
 package concurrencyHomeworkFestival;
 
 import java.util.ArrayDeque;
-import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ConcurrencyHomeworkFestival {
@@ -119,7 +118,6 @@ public class ConcurrencyHomeworkFestival {
 
                try {
                    while (!clintiQueue.isEmpty()) {
-                       
                        Thread.sleep(5000);
 
                        if (clintiQueue.getFirst().equals("full")) {
